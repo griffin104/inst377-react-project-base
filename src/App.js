@@ -1,26 +1,16 @@
-import logo from './logo.svg';
+
 import { Link } from 'react-router-dom'
 import './App.css';
+import Example from './components/example.js'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Link to="/invoices">Invoices</Link> |{" "}
-      <Link to="/expenses">Expenses</Link>
-      </header>
+      <h1>This is the first page!</h1>
+      <Link to='/secondpage'>Second Page</Link>
+      <Example number={8} text='this is text passed through as a prop!'> 
+        <p>This is a child of &lt;Example&gt;.</p>
+      </Example>
     </div>
   );
 }
